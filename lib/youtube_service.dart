@@ -9,7 +9,7 @@ import 'package:colormind/models/emotion_model.dart';
 
 // 여기에 "YouTube Data API v3" 용으로 발급받은 본인의 API 키를 입력하세요.
 const String _apiKey =
-    'AIzaSyA3txsAitPuGHLOc69bkA_iaQmbvgMwbJQ'; // <--- 반드시 본인의 유효한 키로 교체해주세요.
+    'YouTube API'; // <--- 반드시 본인의 유효한 키로 교체해주세요.
 
 const String _youtubeApiUrl =
     'https://www.googleapis.com/youtube/v3/playlistItems';
