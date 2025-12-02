@@ -25,7 +25,7 @@ import 'package:colormind/models/emotion_model.dart';
 //
 // 5. 아래 코드를 `final String _apiKey = dotenv.env['YOUTUBE_API_KEY'] ?? '';` 와 같이 수정합니다.
 // =================================================================================
-const String _apiKey = 'AIzaSyAiZtmoSqNYNc4JRLXbEaJPFwbo9l9cp7E'; // <--- 본인의 유효한 키로 교체해주세요.
+const String _apiKey = 'Youtube API'; // <--- 본인의 유효한 키로 교체해주세요.
 
 const String _youtubeApiUrl =
     'https://www.googleapis.com/youtube/v3/playlistItems';
