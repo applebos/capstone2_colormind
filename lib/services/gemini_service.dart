@@ -3,7 +3,7 @@ import 'package:google_generative_ai/google_generative_ai.dart';
 
 class GeminiService {
   // 1. 여기에 직접 발급받으신 API 키를 사용합니다.
-  final String _apiKey = 'AIzaSyByoJzf8Q5DanlIIpizCJRZe-w5zMptgc4';
+  final String _apiKey = 'Gemini API';
 
   Future<String> getRecommendations(List<String> emotions) async {
     // 2. 문제를 일으키던 불필요한 'if' 문을 완전히 삭제했습니다.
