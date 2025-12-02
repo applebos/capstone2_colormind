@@ -53,10 +53,8 @@ dependencies:
   path: ^1.9.0
   table_calendar: ^3.0.8
   google_generative_ai: ^0.4.7
+  shared_preferences: ^2.2.3
   flutter_markdown: ^0.7.7+1
-
-  http:
-
 
 dev_dependencies:
   flutter_test:
@@ -80,9 +78,9 @@ flutter_launcher_icons:
 
 flutter_native_splash:
   color: "#FFFFFF"
-  image: "assets/colormind_logo.png"
+  image: "assets/colormind_logo_3.png"
   android_12:
-    image: "assets/colormind_logo.png"
+    image: "assets/colormind_logo_3.png"
     color: "#FFFFFF"
 
 

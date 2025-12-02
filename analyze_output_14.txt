@@ -1,0 +1,20 @@
+
+┌─────────────────────────────────────────────────────────┐
+│ A new version of Flutter is available!                  │
+│                                                         │
+│ To update to the latest version, run "flutter upgrade". │
+└─────────────────────────────────────────────────────────┘
+Analyzing colormind_ver2...                                     
+
+warning - Unused import: 'package:colormind/screens/main_layout.dart' - lib\main.dart:3:8 - unused_import
+warning - Unused import: 'emotion_model.dart' - lib\models\emotion_character.dart:2:8 - unused_import
+   info - The imported package 'shared_preferences' isn't a dependency of the importing package - lib\providers\character_provider.dart:2:8 - depend_on_referenced_packages
+  error - Target of URI doesn't exist: 'package:shared_preferences/shared_preferences.dart' - lib\providers\character_provider.dart:2:8 - uri_does_not_exist
+  error - Undefined name 'SharedPreferences' - lib\providers\character_provider.dart:18:25 - undefined_identifier
+  error - Undefined name 'SharedPreferences' - lib\providers\character_provider.dart:29:25 - undefined_identifier
+warning - Unused import: 'package:colormind/widgets/glass_container.dart' - lib\screens\home_screen.dart:11:8 - unused_import
+   info - Statements in an if should be enclosed in a block - lib\screens\home_screen.dart:103:13 - curly_braces_in_flow_control_structures
+   info - Don't invoke 'print' in production code - lib\services\gemini_service.dart:39:7 - avoid_print
+warning - This default clause is covered by the previous cases - lib\widgets\emotion_character_card.dart:208:7 - unreachable_switch_default
+warning - The value of the local variable 'eyeColor' isn't used - lib\widgets\emotion_character_card.dart:229:11 - unused_local_variable
+
