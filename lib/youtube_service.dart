@@ -4,28 +4,9 @@ import 'package:dio/dio.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'package:flutter/foundation.dart';
 
-// 사용자님의 emotion_model.dart 파일을 정확하게 import 합니다.
 import 'package:colormind/models/emotion_model.dart';
 
-// =================================================================================
-// 보안 경고: API 키를 소스 코드에 직접 포함하는 것은 매우 위험합니다.
-// 앱이 디컴파일되면 키가 유출되어 무단으로 사용될 수 있습니다.
-//
-// 추천 해결 방법:
-// 1. 프로젝트 루트에 `.env` 파일을 생성합니다:
-//    YOUTUBE_API_KEY=AIzaSy... (본인의 전체 API 키)
-//
-// 2. `pubspec.yaml` 파일에 `flutter_dotenv` 패키지를 추가합니다.
-//    dependencies:
-//      flutter_dotenv: ^5.1.0
-//
-// 3. `.gitignore` 파일에 `.env`를 추가하여 키가 Git에 커밋되지 않도록 합니다.
-//
-// 4. main.dart에서 앱 시작 시 `await dotenv.load(fileName: ".env");`를 호출합니다.
-//
-// 5. 아래 코드를 `final String _apiKey = dotenv.env['YOUTUBE_API_KEY'] ?? '';` 와 같이 수정합니다.
-// =================================================================================
-const String _apiKey = 'Youtube API'; // <--- 본인의 유효한 키로 교체해주세요.
+const String _apiKey = 'Youtube API'; // <--- 본인의 유효한 키로 교체
 
 const String _youtubeApiUrl =
     'https://www.googleapis.com/youtube/v3/playlistItems';
