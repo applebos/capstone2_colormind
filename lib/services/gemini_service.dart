@@ -2,14 +2,10 @@ import 'package:flutter/foundation.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 
 class GeminiService {
-  // 1. 여기에 직접 발급받으신 API 키를 사용합니다.
   final String _apiKey = 'Gemini API';
 
   Future<String> getRecommendations(List<String> emotions) async {
-    // 2. 문제를 일으키던 불필요한 'if' 문을 완전히 삭제했습니다.
-    //    이제 이 코드는 항상 API를 호출하려고 시도합니다.
-
-    // 3. 올바른 모델 이름인 'gemini-1.0-pro-latest'를 사용합니다.
+   
     final model = GenerativeModel(model: 'gemini-2.5-flash', apiKey: _apiKey);
 
     final prompt =
