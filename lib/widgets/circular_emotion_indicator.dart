@@ -20,7 +20,7 @@ class CircularEmotionIndicator extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          width: 80, // Size of the circular indicator
+          width: 80,
           height: 80,
           child: Stack(
             alignment: Alignment.center,
@@ -30,25 +30,24 @@ class CircularEmotionIndicator extends StatelessWidget {
                 width: 70,
                 height: 70,
                 child: CircularProgressIndicator(
-                  value: 1.0, // Full circle for background
+                  value: 1.0, 
                   strokeWidth: 8,
-                  strokeCap: StrokeCap.round, // Rounded ends for 3D effect
+                  strokeCap: StrokeCap.round,
                   valueColor: AlwaysStoppedAnimation<Color>(
                     emotion.backgroundColor.withOpacity(0.15),
                   ),
                   backgroundColor: Colors.transparent,
                 ),
               ),
-              // Progress circle
               SizedBox(
                 width: 70,
                 height: 70,
                 child: CircularProgressIndicator(
-                  value: probability, // Filled based on probability
+                  value: probability, 
                   strokeWidth: 8,
-                  strokeCap: StrokeCap.round, // Rounded ends for 3D effect
+                  strokeCap: StrokeCap.round,
                   valueColor: AlwaysStoppedAnimation<Color>(
-                    emotion.backgroundColor, // Emotion's background color for progress
+                    emotion.backgroundColor,
                   ),
                   backgroundColor: Colors.transparent,
                 ),
@@ -57,7 +56,7 @@ class CircularEmotionIndicator extends StatelessWidget {
               Icon(
                 emotion.icon,
                 size: 36,
-                color: emotion.backgroundColor, // Using emotion color for the icon
+                color: emotion.backgroundColor, 
               ),
             ],
           ),
@@ -67,7 +66,7 @@ class CircularEmotionIndicator extends StatelessWidget {
           emotion.name,
           style: TextStyle(
             fontWeight: isHighlighted ? FontWeight.bold : FontWeight.normal,
-            color: Colors.black, // Always black
+            color: Colors.black, 
             fontSize: 14,
           ),
         ),
@@ -75,7 +74,7 @@ class CircularEmotionIndicator extends StatelessWidget {
           '${(probability * 100).toStringAsFixed(1)}%',
           style: TextStyle(
             fontWeight: isHighlighted ? FontWeight.bold : FontWeight.normal,
-            color: Colors.black, // Always black
+            color: Colors.black, 
             fontSize: 12,
           ),
         ),
