@@ -23,7 +23,6 @@ class _InAppMusicPlayerState extends State<InAppMusicPlayer> {
   @override
   void initState() {
     super.initState();
-    // Listen for music completion to play next song
     widget.musicService.onPlayerComplete.listen((_) {
       _playNext();
     });
