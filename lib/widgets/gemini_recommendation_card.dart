@@ -20,7 +20,7 @@ class _GeminiRecommendationCardState extends State<GeminiRecommendationCard> {
   @override
   void initState() {
     super.initState();
-    // 위젯이 생성될 때 한 번만 Gemini API를 호출합니다.
+    // 위젯이 생성될 때 한 번만 Gemini API를 호출
     _recommendationFuture = _geminiService.getRecommendations(
       widget.emotionNames,
     );
