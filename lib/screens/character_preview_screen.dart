@@ -18,7 +18,6 @@ class _CharacterPreviewScreenState extends State<CharacterPreviewScreen> {
   Widget build(BuildContext context) {
     final character = EmotionCharacter.fromEmotionName(_selectedEmotion);
 
-    // Get emotion color for background gradient only
     final emotionColor = allEmotions.firstWhere((e) => e.name == _selectedEmotion).backgroundColor;
 
     return Scaffold(
@@ -37,7 +36,6 @@ class _CharacterPreviewScreenState extends State<CharacterPreviewScreen> {
         child: SafeArea(
           child: Column(
             children: [
-              // Header - Fixed white color
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Text(
