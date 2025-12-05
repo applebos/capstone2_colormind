@@ -32,7 +32,6 @@ class _CropPreviewScreenState extends State<CropPreviewScreen> {
     super.initState();
     _currentCropRect = widget.initialCropRect;
     _image = Image.file(File(widget.originalImagePath));
-    // Decode the image to get its dimensions
     _image.image.resolve(const ImageConfiguration()).addListener(
       ImageStreamListener((ImageInfo info, bool _) {
         if (mounted) {
