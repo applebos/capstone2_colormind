@@ -22,7 +22,6 @@ Future<Float32List> preprocessImage(
     interpolation: img.Interpolation.average,
   );
 
-  // Convert the resized image to a Float32List of normalized pixel values.
   final input = Float32List(targetSize * targetSize * 3);
   int bufferIndex = 0;
   for (int y = 0; y < resized.height; y++) {
@@ -34,6 +33,5 @@ Future<Float32List> preprocessImage(
     }
   }
 
-  // Reshape to [1, targetSize, targetSize, 3] as expected by the model.
   return input.buffer.asFloat32List();
 }
