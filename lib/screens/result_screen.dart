@@ -16,8 +16,6 @@ import 'package:colormind/theme/app_theme.dart';
 import 'package:colormind/youtube_service.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-
-// Gemini 추천 카드를 사용하기 위해 import 문을 추가합니다.
 import 'package:colormind/widgets/gemini_recommendation_card.dart';
 import 'package:colormind/providers/character_provider.dart';
 import 'package:colormind/widgets/emotion_character_card.dart';
@@ -387,9 +385,7 @@ class _ResultScreenState extends State<ResultScreen> {
             const SizedBox(height: 24),
             YouTubeCard(emotionNames: _top3Emotions),
 
-            // ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼
             // YOUTUBE PLAYER WIDGET AREA
-            // ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼
             const SizedBox(height: 16),
             Consumer<YouTubeService>(
               builder: (context, youtubeService, child) {
@@ -448,9 +444,7 @@ class _ResultScreenState extends State<ResultScreen> {
               },
             ),
 
-            // ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼
             // Emotion Character Card
-            // ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼
             const SizedBox(height: 24),
             if (_top3Emotions.isNotEmpty)
               Consumer<CharacterProvider>(
@@ -477,15 +471,11 @@ class _ResultScreenState extends State<ResultScreen> {
                 },
               ),
 
-            // ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼
             // Gemini 추천 카드 추가
-            // ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼
             const SizedBox(height: 24), // 유튜브 카드와 Gemini 카드 사이의 간격
-            // _top3Emotions 리스트가 비어있지 않을 때만 Gemini 카드를 보여줍니다.
             if (_top3Emotions.isNotEmpty)
               GeminiRecommendationCard(emotionNames: _top3Emotions),
 
-            // ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲
             const SizedBox(height: 32),
 
             ElevatedButton.icon(
