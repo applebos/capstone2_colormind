@@ -46,8 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
     super.dispose();
   }
 
-  /// Handles picking an image from the gallery and performing emotion prediction.
-  /// Navigates to the ResultScreen upon successful prediction.
+
   Future<void> _pickImageAndPredict(ImageSource source) async {
     Provider.of<MusicService>(context, listen: false).pauseMusic();
     String? imagePath;
@@ -70,7 +69,6 @@ class _HomeScreenState extends State<HomeScreen> {
       return; // User canceled the picker
     }
 
-    // --- New Interactive Crop Flow ---
     File finalImageFile;
     try {
       // 1. Detect initial crop rectangle
@@ -95,7 +93,6 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         );
 
-        // 3. Handle result
         if (confirmedBytes == null) {
           // User cancelled
           if (mounted) {
@@ -104,7 +101,6 @@ class _HomeScreenState extends State<HomeScreen> {
           return;
         }
 
-        // 4. Save confirmed image to a temporary file
         final tempDir = await getTemporaryDirectory();
         final fileName =
             'processed_${DateTime.now().millisecondsSinceEpoch}.png';
@@ -116,7 +112,6 @@ class _HomeScreenState extends State<HomeScreen> {
       debugPrint("Cropping flow failed: $e");
       finalImageFile = File(imagePath); // Fallback to original image
     }
-    // --- End of New Interactive Crop Flow ---
 
     setState(() {
       _isPredicting = true;
@@ -355,7 +350,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           subLabel: '사진 선택하기',
                           onTap: () =>
                               _pickImageAndPredict(ImageSource.gallery),
-                          color: const Color(0xFFFFAB91), // Soft Coral
+                          color: const Color(0xFFFFAB91),
                           iconColor: const Color(0xFFD84315),
                         ),
                         const SizedBox(width: 20),
@@ -370,7 +365,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 200), // Bottom padding Increased
+                    const SizedBox(height: 200), 
                   ],
                 ),
               ),
