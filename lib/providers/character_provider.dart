@@ -29,7 +29,6 @@ class CharacterProvider extends ChangeNotifier {
       _topEmotions = savedEmotions;
       _currentCharacter = EmotionCharacter.fromEmotionName(savedEmotions.first);
     } else {
-       // Fallback for legacy single emotion save
        final savedEmotion = prefs.getString('last_emotion_character');
        if (savedEmotion != null) {
          _topEmotions = [savedEmotion];
@@ -51,12 +50,9 @@ class CharacterProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  // Helper to get theme data based on current character
   ThemeData getCharacterTheme() {
-    // Create a custom theme based on the character's color
     final baseTheme = AppTheme.warmGlassTheme;
 
-    // Get the emotion for the current character to fetch its textColor
     final emotion = allEmotions.firstWhere(
       (e) => e.name == currentEmotionName,
       orElse: () => allEmotions.first,
