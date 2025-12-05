@@ -36,7 +36,7 @@ class _MainLayoutState extends State<MainLayout> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBody: true, // Body extends behind the bottom navigation bar
+      extendBody: true, 
       body: Container(
         decoration: BoxDecoration(
           gradient: AppTheme.getBackgroundGradient(Theme.of(context)),
@@ -44,7 +44,7 @@ class _MainLayoutState extends State<MainLayout> {
         child: Center(child: _widgetOptions.elementAt(_selectedIndex)),
       ),
       bottomNavigationBar: Container(
-        margin: const EdgeInsets.only(left: 40, right: 40, bottom: 30), // Tighter margins for pill shape
+        margin: const EdgeInsets.only(left: 40, right: 40, bottom: 30),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(50), // Pill shape
           boxShadow: [
@@ -59,10 +59,10 @@ class _MainLayoutState extends State<MainLayout> {
         child: ClipRRect(
           borderRadius: BorderRadius.circular(50),
           child: BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20), // Stronger blur
+            filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20), 
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.white.withValues(alpha: 0.9), // Cleaner, whiter background
+                color: Colors.white.withValues(alpha: 0.9), 
                 borderRadius: BorderRadius.circular(50),
                 border: Border.all(
                   color: Colors.white,
@@ -75,7 +75,7 @@ class _MainLayoutState extends State<MainLayout> {
                 currentIndex: _selectedIndex,
                 onTap: _onItemTapped,
                 selectedItemColor: Theme.of(context).primaryColor,
-                unselectedItemColor: const Color(0xFFBCAAA4), // Softer unselected color
+                unselectedItemColor: const Color(0xFFBCAAA4), 
                 showSelectedLabels: false, // Hide labels for cleaner look (like reference)
                 showUnselectedLabels: false,
                 type: BottomNavigationBarType.fixed,
