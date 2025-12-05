@@ -4,12 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-// 사용자님의 emotion_model.dart 파일을 정확하게 import 합니다.
 import 'package:colormind/models/emotion_model.dart';
 
-// 여기에 "YouTube Data API v3" 용으로 발급받은 본인의 API 키를 입력하세요.
 const String _apiKey =
-    'AIzaSyA3txsAitPuGHLOc69bkA_iaQmbvgMwbJQ'; // <--- 반드시 본인의 유효한 키로 교체해주세요.
+    'AIzaSyA3txsAitPuGHLOc69bkA_iaQmbvgMwbJQ'; // <--- 반드시 본인의 유효한 키로 교체
 
 const String _youtubeApiUrl =
     'https://www.googleapis.com/youtube/v3/playlistItems';
@@ -70,7 +68,6 @@ class YouTubeService extends ChangeNotifier {
     notifyListeners();
 
     try {
-      // 사용자님의 allEmotions 리스트에서 감정 이름으로 playlistId를 정확하게 찾아냅니다.
       final emotion = allEmotions.firstWhere(
         (e) => e.name == emotionName,
         // 혹시 일치하는 감정이 없으면 첫 번째 감정을 기본값으로 사용 (오류 방지)
