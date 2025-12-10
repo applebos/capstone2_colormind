@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 
 class GeminiService {
-  final String _apiKey = 'Gemini API';
+  final String _apiKey = 'Gemini API'; // <--- 본인의 유효한 키로 교체
 
   Future<String> getRecommendations(List<String> emotions) async {
    
